@@ -19,5 +19,7 @@ public interface ProductoService {
 
     //se elimina el registro que tenga el idProducto
     public void delete(Producto producto);
+
+  
     
 }
