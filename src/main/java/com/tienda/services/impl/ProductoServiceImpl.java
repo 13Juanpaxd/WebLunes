@@ -49,4 +49,16 @@ public class ProductoServiceImpl implements ProductoService{
     }
 
     
+    public List<Producto> consultaQuery(double precioInf,double precioSup){
+    return ProductoDao.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
+    }
+    
+    public List<Producto> consultaJPQL(double precioInf,double precioSup){
+    return ProductoDao.consultaJPQL(precioInf, precioSup);
+    }
+    
+    public List<Producto> consultaSQL(double precioInf,double precioSup){
+    return ProductoDao.consultaSQL(precioInf, precioSup);
+    }
+    
 }
